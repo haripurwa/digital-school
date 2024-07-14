@@ -17,4 +17,7 @@ public class Teachers extends DefaultModel implements Serializable {
     private String name;
     private String address;
     private String contactInformation;
+    private String subject;
+    private String qualification;
+    private String experience;
 }

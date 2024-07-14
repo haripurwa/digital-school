@@ -3,16 +3,15 @@ package com.digital_school.account.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-
 @Setter
 @Getter
-public class StudentResponse {
+public class TeachersResponse {
     private String id;
     private String name;
     private String address;
-    private String phoneNumber;
-    private String dob;
-    private String gradeLevel;
-    private String classInfo;
-    private String parent;
+    private String contactInformation;
+    private String subject;
+    private String qualification;
+    private String experience;
+
 }

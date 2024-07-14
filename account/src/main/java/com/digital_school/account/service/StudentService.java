@@ -4,7 +4,6 @@ import com.digital_school.account.dto.StudentRequest;
 import com.digital_school.account.dto.StudentResponse;
 
 import java.util.List;
-import java.util.UUID;
 
 public interface StudentService {
     List<StudentResponse> getAllStudents();
