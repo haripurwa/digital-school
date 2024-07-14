@@ -18,17 +18,19 @@ import java.util.UUID;
 @MappedSuperclass
 public abstract class DefaultModel implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID id;
+    @Column(columnDefinition = "varchar(36)")
+    private String id;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    @PrePersist
+    @PrePersist()
     protected void onCreate() {
+        id= String.valueOf(UUID.randomUUID());
         createdAt = LocalDateTime.now();
         updatedAt = LocalDateTime.now();
     }
 
+    @PreUpdate
     protected void onUpdate() {
         updatedAt = LocalDateTime.now();
     }

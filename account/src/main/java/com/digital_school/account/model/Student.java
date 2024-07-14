@@ -21,6 +21,4 @@ private String dob;
 private String gradeLevel;
 private String classInfo;
 private String parent;
-
-
 }

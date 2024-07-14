@@ -1,9 +1,15 @@
 package com.digital_school.account.service;
 
-import com.digital_school.account.dto.Response;
-import com.digital_school.account.dto.StudentCreateRequest;
+import com.digital_school.account.dto.StudentRequest;
+import com.digital_school.account.dto.StudentResponse;
+
+import java.util.List;
+import java.util.UUID;
 
 public interface StudentService {
-    Response create(StudentCreateRequest request);
-
+    List<StudentResponse> getAllStudents();
+    StudentResponse getStudentById(String id);
+    StudentResponse createStudent(StudentRequest studentRequest);
+    StudentResponse updateStudent(StudentRequest studentRequest, String id);
+    void deleteStudent(String id);
 }

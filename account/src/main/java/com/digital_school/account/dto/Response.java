@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 public class Response<T> {
     @JsonIgnore
     private Integer httpCode;
-    private String responseCode;
-    private String responseDesc;
+    private String code;
+    private String message;
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
-    private T responseData;
+    private T data;
 }
