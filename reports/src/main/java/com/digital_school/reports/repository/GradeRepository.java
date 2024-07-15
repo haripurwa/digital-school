@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface GradeRepository extends JpaRepository<Grade, UUID> {
+public interface GradeRepository extends JpaRepository<Grade, String> {
 }
