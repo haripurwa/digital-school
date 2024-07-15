@@ -18,7 +18,7 @@ For managing, including creating, retrieving, updating, and deleting student rec
 - set on port 8080
 - create db account_db
 - run mvn spring-boot:run
-- 
+
 ## Getting Started ms reports
 - set on port 8081
 - create db reports_db
