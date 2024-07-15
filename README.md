@@ -12,7 +12,7 @@ For managing, including creating, retrieving, updating, and deleting student rec
 ## Prerequisites
 - Java 17 or later
 - Maven 3.6.3 or later 
-- Mysql version >= 8.0.0
+- Mysql version 8.0.0 or later
 
 ## Getting Started ms account
 - set on port 8080
