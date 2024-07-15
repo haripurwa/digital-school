@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class AttandanceRequest {
+public class AttendanceRequest {
     @Schema(description = "studentId", example = "310b1a07-39c8-43bd-867b-470c6cbda77a")
     private String studentId;
     @Schema(description = "courseid", example = "310b1a07-39c8-43bd-867b-470c6cbda77a")

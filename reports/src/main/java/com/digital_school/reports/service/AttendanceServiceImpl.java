@@ -1,7 +1,7 @@
 package com.digital_school.reports.service;
 
-import com.digital_school.reports.dto.AttandanceRequest;
-import com.digital_school.reports.dto.AttandanceResponse;
+import com.digital_school.reports.dto.AttendanceRequest;
+import com.digital_school.reports.dto.AttendanceResponse;
 import com.digital_school.reports.dto.model.Student;
 import com.digital_school.reports.model.Attendance;
 import com.digital_school.reports.repository.AttendanceRepository;
@@ -18,7 +18,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @Slf4j
-public class AttandanceServiceImpl implements AttandanceService {
+public class AttendanceServiceImpl implements AttendanceService {
     @Value("${base.url.student}")
     private String baseUrlStudent;
     @Autowired
@@ -29,7 +29,7 @@ public class AttandanceServiceImpl implements AttandanceService {
     private ObjectMapper objectMapper;
 
     @Override
-    public AttandanceResponse create(AttandanceRequest req) {
+    public AttendanceResponse create(AttendanceRequest req) {
         String url = baseUrlStudent + "/api/students/" + req.getStudentId();
         try {
             ResponseEntity<Student> response = restTemplate.getForEntity(url, Student.class);
@@ -48,6 +48,6 @@ public class AttandanceServiceImpl implements AttandanceService {
         attendance.setCourseId(req.getCourseId());
         attendance.setSemester(req.getSemester());
         Attendance savedTeachers = attendanceRepository.save(attendance);
-        return objectMapper.convertValue(savedTeachers, AttandanceResponse.class);
+        return objectMapper.convertValue(savedTeachers, AttendanceResponse.class);
     }
 }

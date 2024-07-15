@@ -5,6 +5,6 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class AttandanceResponse {
+public class AttendanceResponse {
     private String id;
 }
