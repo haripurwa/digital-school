@@ -12,6 +12,7 @@ For managing, including creating, retrieving, updating, and deleting student rec
 ## Prerequisites
 - Java 17 or later
 - Maven 3.6.3 or later 
+- Mysql version >= 8.0.0
 
 ## Getting Started ms account
 - set on port 8080
@@ -23,6 +24,12 @@ For managing, including creating, retrieving, updating, and deleting student rec
 - create db reports_db
 - run mvn spring-boot:run
 
-## Test
+## API Doc
+# ms account
 - http://localhost:8080/swagger-ui/index
+# ms reports
 - http://localhost:8081/swagger-ui/index
+
+
+## note:
+- migration using JPA auto-update
